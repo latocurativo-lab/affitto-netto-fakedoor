@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cedolare secca o IRPEF 2026: quanto conviene davvero? — TEST</title>
+<meta name="description" content="Calcolatore STIMA 2026: cedolare secca (21/10/26%) vs IRPEF (23/33/43) sul tuo canone. Quanto versi a novembre, codici F24, checklist. Pagina di TEST: nessun pagamento reale.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<style>
+:root{
+  --carta:#faf5ea; --carta2:#f3ecdb; --inchiostro:#1c1710; --inchiostro2:#5a5142;
+  --riga:#1c1710; --timbro:#b3261e; --verde:#1e6b3a; --senape:#c8a415; --blu:#1d4e89;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --serif:Didot,"Bodoni MT","Playfair Display",Georgia,"Times New Roman",serif;
+  --sans:"Avenir Next","Segoe UI",Verdana,Geneva,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--carta);color:var(--inchiostro);font-family:var(--sans);line-height:1.55;
+  background-image:repeating-linear-gradient(0deg,rgba(28,23,16,.028) 0 1px,transparent 1px 26px);}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 64px}
+.masthead{border-bottom:3px double var(--riga);padding:14px 0 10px;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline;justify-content:space-between}
+.masthead .brand{font-family:var(--serif);font-weight:700;font-size:1.35rem;letter-spacing:.5px}
+.masthead .brand small{font-family:var(--sans);font-weight:400;font-size:.72rem;color:var(--inchiostro2);letter-spacing:2px;text-transform:uppercase;display:block}
+.masthead .dateline{font-family:var(--mono);font-size:.72rem;color:var(--inchiostro2);text-align:right}
+.testbar{background:var(--timbro);color:#fff;font-family:var(--mono);font-size:.8rem;font-weight:700;
+  text-align:center;padding:8px 12px;letter-spacing:.4px}
+.testbar a{color:#ffe9a8}
+h1{font-family:var(--serif);font-size:clamp(1.9rem,5.4vw,2.9rem);line-height:1.08;margin:22px 0 6px;font-weight:700}
+.sottotitolo{font-size:1rem;color:var(--inchiostro2);margin:0 0 4px}
+.fonti{font-size:.8rem;color:var(--inchiostro2)}
+.fonti a{color:var(--blu)}
+.calc{border:2px solid var(--riga);background:#fffdf6;box-shadow:6px 6px 0 var(--riga);padding:18px;margin:20px 0}
+.calc h2{font-family:var(--mono);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;margin:0 0 12px;color:var(--inchiostro2)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+label{display:block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
+input,select{width:100%;font-family:var(--mono);font-size:1.05rem;padding:10px;border:2px solid var(--riga);background:var(--carta);color:var(--inchiostro);border-radius:0}
+input:focus,select:focus{outline:3px solid var(--senape);outline-offset:1px}
+.verdetto{position:relative;border-top:2px solid var(--riga);margin-top:16px;padding-top:14px}
+.timbro{display:inline-block;font-family:var(--serif);font-weight:700;font-size:1.15rem;color:var(--timbro);
+  border:3px solid var(--timbro);border-radius:6px;padding:6px 14px;transform:rotate(-2deg);
+  text-transform:uppercase;letter-spacing:1px;background:rgba(179,38,30,.06)}
+.timbro.verde{color:var(--verde);border-color:var(--verde);background:rgba(30,107,58,.06)}
+.cifra{font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:1.6rem;font-weight:700}
+.barre{margin:12px 0}
+.barra-riga{display:grid;grid-template-columns:110px 1fr 110px;gap:8px;align-items:center;font-family:var(--mono);font-size:.8rem;margin:6px 0}
+.barra{height:18px;background:var(--carta2);border:1px solid var(--riga);position:relative}
+.barra>i{display:block;height:100%}
+.barra.ced>i{background:var(--timbro)} .barra.irpef>i{background:var(--inchiostro)}
+.nota{font-size:.82rem;color:var(--inchiostro2)}
+.box{border:2px solid var(--riga);padding:14px 16px;margin:18px 0;background:#fffdf6}
+.box h2{font-family:var(--serif);font-size:1.25rem;margin:0 0 8px}
+.box.novembre{background:#1c1710;color:var(--carta)}
+.box.novembre .cifra{color:#ffe9a8}
+.box.novembre a{color:#ffe9a8}
+table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.86rem}
+th,td{border:1px solid var(--riga);padding:8px;text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{background:var(--carta2)}
+details{border:1px solid var(--riga);margin:8px 0;background:#fffdf6}
+summary{cursor:pointer;padding:10px 12px;font-weight:700}
+details .corpo{padding:0 12px 12px;font-size:.92rem}
+.cta{border:3px double var(--riga);background:var(--carta2);padding:18px;text-align:center;margin:22px 0}
+.cta button{font-family:var(--sans);font-weight:700;font-size:1.05rem;background:var(--timbro);color:#fff;
+  border:2px solid var(--riga);box-shadow:4px 4px 0 var(--riga);padding:12px 22px;cursor:pointer}
+.cta button:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--riga)}
+.microcopy{font-size:.82rem;color:var(--inchiostro2);margin-top:8px}
+footer{border-top:3px double var(--riga);margin-top:28px;padding-top:12px;font-size:.8rem;color:var(--inchiostro2)}
+.modale-sfondo{display:none;position:fixed;inset:0;background:rgba(28,23,16,.6);z-index:50;align-items:center;justify-content:center;padding:20px}
+.modale-sfondo.aperta{display:flex}
+.modale{background:var(--carta);border:3px solid var(--riga);box-shadow:8px 8px 0 var(--riga);max-width:440px;padding:24px}
+.modale h3{font-family:var(--serif);margin-top:0}
+.hash{font-family:var(--mono);font-size:.75rem;word-break:break-all}
+.noscript-esempio{border:2px dashed var(--riga);padding:12px;margin:12px 0;font-size:.9rem}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Sopra quale reddito conviene la cedolare?","acceptedAnswer":{"@type":"Answer","text":"Stima: con canone 9.000€ la cedolare al 21% (1.890€) batte l'IRPEF marginale già dal primo scaglione 23%. Il vantaggio cresce con il reddito (33% e 43%). Verifica con CAF/commercialista."}},
+{"@type":"Question","name":"Secondo immobile in affitto breve: come funziona?","acceptedAnswer":{"@type":"Answer","text":"Nel 2026 il regime breve vale entro 2 appartamenti: 21% sul primo, 26% sul secondo. Dal terzo scatta presunzione di impresa."}},
+{"@type":"Question","name":"Acconto di novembre: come si calcola?","acceptedAnswer":{"@type":"Answer","text":"Acconto = 100% dell'imposta anno precedente. Sopra 257,52€ in due rate: 40% entro giugno (cod. 1840) e 60% entro novembre (cod. 1841). Sotto 51,65€ nessun acconto."}},
+{"@type":"Question","name":"Devo registrarmi all'Agenzia delle Entrate?","acceptedAnswer":{"@type":"Answer","text":"Sì: registrazione del contratto con modello RLI (online o in ufficio); con cedolare non si pagano imposta di registro e bollo."}},
+{"@type":"Question","name":"Cedolare e IMU?","acceptedAnswer":{"@type":"Answer","text":"La cedolare sostituisce IRPEF e addizionali sul canone, non l'IMU: l'IMU resta dovuta secondo le regole ordinarie."}}]}
+</script>
+</head>
+<body>
+<div class="testbar" role="note">⚠ PAGINA DI TEST — nessun pagamento reale: il pulsante PDF registra solo interesse anonimo. <a href="#fakedoor">dettagli</a></div>
+<div class="wrap">
+  <div class="masthead">
+    <div class="brand">L’Affitto Chiaro<small>suite Lavoro·Fisco·Casa</small></div>
+    <div class="dateline">Edizione 2026 · dati verificati <span id="taxmeta">il 2026-09-07</span><br>fonti: Agenzia delle Entrate</div>
+  </div>
+
+  <h1>Cedolare secca o IRPEF 2026: quanto conviene davvero?</h1>
+  <p class="sottotitolo">Un numero personalizzato in 30 secondi: il tuo canone, il tuo reddito, il verdetto — più quanto versi il 30 novembre.</p>
+  <p class="fonti">Aliquote AdE: cedolare 21% / 10% concordato / 21%+26% brevi · IRPEF 2026 23/33/43 (L. 199/2025) · F24 1840/1841/1842. <a href="https://www.agenziaentrate.gov.it/portale/aree-tematiche/casa/affitto/cedolare-secca" rel="noopener">AdE cedolare</a> · <a href="https://www.agenziaentrate.gov.it/portale/imposta-sul-reddito-delle-persone-fisiche-irpef-/aliquote-e-calcolo-dell-irpef" rel="noopener">AdE IRPEF</a> · <a href="https://www.agenziaentrate.gov.it/portale/schede/fabbricatiterreni/cedolare-secca/cedolare-secca-come-si-paga" rel="noopener">AdE come si paga</a></p>
+
+  <section class="calc" aria-label="Calcolatore">
+    <h2>⚖ Il calcolatore — 4 risposte, 1 verdetto</h2>
+    <div class="grid">
+      <div><label for="inL">Canone annuo (€)</label><input id="inL" inputmode="numeric" type="number" min="0" max="1000000" step="100" value="9000"></div>
+      <div><label for="inT">Tipo contratto</label>
+        <select id="inT"><option value="libero">Libero — 21%</option><option value="concordato">Concordato — 10%</option><option value="brevi">Affitto breve — 21%/26%</option></select></div>
+      <div><label for="inR">Reddito complessivo (€)</label><input id="inR" inputmode="numeric" type="number" min="0" max="10000000" step="500" value="35000"></div>
+      <div id="boxN" hidden><label for="inN">Immobili in affitto breve</label>
+        <select id="inN"><option value="1">1 (21%)</option><option value="2">2 — questo è il 2° (26%)</option></select></div>
+    </div>
+    <noscript><div class="noscript-esempio"><strong>Esempio precalcolato (JS disabilitato):</strong> canone 9.000€, libero, reddito 35.000€ → cedolare 21% = 1.890€ · IRPEF stimata (8.550€ × 33%) = 2.821,50€ → <strong>conviene la cedolare di ~931€</strong>. Acconto 2026: 756€ cod. 1840 entro 30/06 + 1.134€ cod. 1841 entro 30/11.</div></noscript>
+    <div class="verdetto" aria-live="polite">
+      <span id="timbro" class="timbro">Ti conviene la CEDOLARE</span>
+      <p><span class="cifra" id="outRisparmio">~931€/anno</span> <span id="outFParagraph">di risparmio stimato vs IRPEF</span></p>
+      <div class="barre">
+        <div class="barra-riga"><span>Cedolare <b id="labCed">21%</b></span><span class="barra ced"><i id="barCed" style="width:67%"></i></span><b id="outCed">1.890€</b></div>
+        <div class="barra-riga"><span>IRPEF <b id="labIrpef">33%</b></span><span class="barra irpef"><i id="barIrpef" style="width:100%"></i></span><b id="outIrpef">2.821€</b></div>
+      </div>
+      <p class="nota" id="outNota">Canone 9.000€ · imponibile IRPEF 8.550€ (95%) × marginale 33% · stima sul marginale, non calcolo 730.</p>
+      <p class="hash">Condividi questa simulazione: <span id="outHash">#L=9000&amp;T=libero&amp;R=35000</span></p>
+    </div>
+  </section>
+
+  <section class="box" aria-label="Dettaglio confronto">
+    <h2>Il conto, riga per riga</h2>
+    <table><thead><tr><th>Voce</th><th>Aliquota</th><th>Importo/anno</th></tr></thead>
+    <tbody><tr><td>Cedolare secca</td><td id="tabAliqCed">21%</td><td id="tabCed">1.890,00€</td></tr>
+    <tr><td>IRPEF stimata (95% × marginale)</td><td id="tabAliqIrpef">33%</td><td id="tabIrpef">2.821,50€</td></tr>
+    <tr><td><strong>Differenza</strong></td><td>—</td><td id="tabDiff"><strong>931,50€</strong></td></tr></tbody></table>
+    <p class="nota">L’IRPEF reale dipende da detrazioni, altri redditi e addizionali: qui è una <strong>stima sul marginale</strong>, onesta per confrontare, non valida come dichiarazione.</p>
+  </section>
+
+  <section class="box novembre" aria-label="Acconto e scadenze">
+    <h2>Quanto versi il 30 novembre</h2>
+    <p><span class="cifra" id="outNov">1.134€</span> <span id="outNovDet">— 2ª rata acconto (60%), cod. F24 <b>1841</b></span></p>
+    <p class="nota" style="color:#e8dcc3" id="outAccDet">Acconto totale 1.890€ (100% imposta anno prec.): 756€ cod. 1840 entro 30/06 + 1.134€ cod. 1841 entro 30/11. Saldo cod. 1842 entro 30/06. Soglie: nessun acconto sotto 51,65€; unica soluzione a novembre sotto 257,52€.</p>
+  </section>
+
+  <section class="box" aria-label="Checklist">
+    <h2>Checklist: non sbagliare nulla (5 passi)</h2>
+    <details open><summary>1. Registra il contratto (RLI)</summary><div class="corpo">Online su AdE (Fisconline/Entratel) o in ufficio entro 30 giorni. Con cedolare: niente imposta di registro né bollo.</div></details>
+    <details><summary>2. Scegli il regime</summary><div class="corpo">Opzione in dichiarazione o nel contratto registrato. Brevi 2026: max 2 appartamenti, poi presunzione d’impresa.</div></details>
+    <details><summary>3. Segna scadenze e codici</summary><div class="corpo">30/06: saldo anno prec. (1842) + 1ª rata acconto (1840). 30/11: 2ª rata o unica soluzione (1841).</div></details>
+    <details><summary>4. Versa con F24</summary><div class="corpo">Anno di riferimento: saldo → anno chiuso; acconto → anno in corso. Conserva le quietanze.</div></details>
+    <details><summary>5. Conserva tutto</summary><div class="corpo">Contratto registrato, F24, dichiarazione con scelta del regime. A dicembre ricontrolla la Legge di Bilancio.</div></details>
+  </section>
+
+  <section class="box" aria-label="Domande frequenti">
+    <h2>Le 5 domande di tutti</h2>
+    <details><summary>Sopra quale reddito conviene la cedolare?</summary><div class="corpo">Con canone 9.000€ al libero, la cedolare (1.890€) batte l’IRPEF stimata già al 23% (~76€ di vantaggio) e stacca al 33% (~931€) e 43% (~1.786€). Al concordato 10% vince quasi sempre.</div></details>
+    <details><summary>Secondo immobile in affitto breve?</summary><div class="corpo">21% sul primo, 26% sul secondo (es. 9.000€ → 2.340€). Dal terzo immobile, presunzione di attività d’impresa.</div></details>
+    <details><summary>Acconto di novembre: come si calcola?</summary><div class="corpo">100% dell’imposta dell’anno precedente. Esempio: cedolare 1.890€ → 756€ a giugno + 1.134€ a novembre.</div></details>
+    <details><summary>Devo andare all’Agenzia delle Entrate?</summary><div class="corpo">No di persona: RLI online basta. In ufficio solo se preferisci carta e fila.</div></details>
+    <details><summary>Cedolare e IMU?</summary><div class="corpo">La cedolare sostituisce IRPEF/addizionali sul canone, non l’IMU che resta dovuta.</div></details>
+  </section>
+
+  <section class="cta" id="fakedoor" aria-label="Riepilogo PDF test">
+    <h2 style="font-family:var(--serif);margin:0 0 6px">Il riepilogo da tenere nel cassetto</h2>
+    <p style="margin:0 0 12px">Verdetto + acconto di novembre + checklist F24, in un foglio stampabile.</p>
+    <button id="btnPdf" type="button">Scarica il riepilogo PDF (19€)</button>
+    <p class="microcopy"><strong>TEST — nessun pagamento, nessun addebito.</strong> Cliccando registriamo solo interesse anonimo (un contatore sul tuo browser) per capire se vale la pena costruirlo davvero. Stima, non consulenza fiscale.</p>
+  </section>
+
+  <footer>
+    <p><strong>Dichiarazione onesta:</strong> questa è una pagina di TEST per misurare interesse. I numeri sono <strong>stime</strong> da aliquote AdE verificate il 2026-09-07 (cedolare 21/10/26%, IRPEF 23/33/43, F24 1840/1841/1842). Non è consulenza fiscale: verifica con AdE/CAF/commercialista. Nessun cookie di profilazione; conteggi anonimi solo sul tuo dispositivo (<a href="metriche.html">metriche</a>).</p>
+    <p>Versione parametri: <span id="taxmeta2">2026.09.07-fakedoor-v1</span> · <a href="metriche.html">Come misuriamo (trasparenza)</a></p>
+  </footer>
+</div>
+
+<div class="modale-sfondo" id="modale"><div class="modale" role="dialog" aria-modal="true" aria-labelledby="modTit">
+  <h3 id="modTit">Grazie — era un test 📋</h3>
+  <p>Non c’è nessun PDF a pagamento (ancora). Abbiamo contato 1 click anonimo: se abbastanza persone lo chiedono, lo costruiamo davvero a 19€.</p>
+  <p class="nota">Usi-calcolo: <b id="modUsi">1</b> · Click PDF: <b id="modClick">1</b> · <a href="metriche.html">vedi i conteggi</a></p>
+  <button id="btnChiudi" type="button" style="font-weight:700;padding:10px 18px;cursor:pointer">Va bene, ho capito</button>
+</div></div>
+
+<script src="calcolo.js"></script>
+<script>
+(function(){
+  var P=null;
+  function val(id){return document.getElementById(id).value;}
+  function tally(key){
+    try{
+      var k='affitto_fakedoor_'+key, n=parseInt(localStorage.getItem(k)||'0',10)+1;
+      localStorage.setItem(k,String(n));
+      var src=(new URLSearchParams(location.search).get('utm_source'))||'diretto';
+      localStorage.setItem('affitto_fakedoor_src',src);
+      return n;
+    }catch(e){return 0;}
+  }
+  function read(key){try{return parseInt(localStorage.getItem('affitto_fakedoor_'+key)||'0',10);}catch(e){return 0;}}
+  function fmt(n){return n.toLocaleString('it-IT',{style:'currency',currency:'EUR',maximumFractionDigits:2});}
+  function fmt0(n){return Math.round(n).toLocaleString('it-IT')+'€';}
+  function pct(x){return (x*100).toLocaleString('it-IT',{maximumFractionDigits:0})+'%';}
+  function render(){
+    if(!P) return;
+    var L=Math.max(0,Number(val('inL'))||0), T=val('inT'), R=Math.max(0,Number(val('inR'))||0);
+    var N=document.getElementById('boxN').hidden?1:Math.max(1,parseInt(val('inN'),10)||1);
+    var o=window.AffittoNetto.calcPure(L,T,R,N,P);
+    var vinceCed=o.verdetto==='cedolare';
+    var timbro=document.getElementById('timbro');
+    timbro.textContent=vinceCed?'Ti conviene la CEDOLARE':'Ti conviene l’IRPEF';
+    timbro.className='timbro'+(vinceCed?'':' verde');
+    document.getElementById('outRisparmio').textContent='~'+fmt0(Math.abs(o.risparmio))+'/anno';
+    document.getElementById('outFParagraph').textContent=vinceCed?'di risparmio stimato vs IRPEF':'di maggior costo della cedolare vs IRPEF (stima)';
+    document.getElementById('outCed').textContent=fmt(o.cedolare);
+    document.getElementById('outIrpef').textContent=fmt(o.irpef);
+    document.getElementById('labCed').textContent=pct(o.aliqCed);
+    document.getElementById('labIrpef').textContent=pct(o.marginale);
+    var mx=Math.max(o.cedolare,o.irpef,1);
+    document.getElementById('barCed').style.width=(100*o.cedolare/mx)+'%';
+    document.getElementById('barIrpef').style.width=(100*o.irpef/mx)+'%';
+    document.getElementById('outNota').textContent='Canone '+fmt0(L)+' · imponibile IRPEF '+fmt(o.imponibile)+' (95%) × marginale '+pct(o.marginale)+' · stima sul marginale, non calcolo 730.';
+    document.getElementById('tabAliqCed').textContent=pct(o.aliqCed);
+    document.getElementById('tabAliqIrpef').textContent=pct(o.marginale);
+    document.getElementById('tabCed').textContent=fmt(o.cedolare);
+    document.getElementById('tabIrpef').textContent=fmt(o.irpef);
+    document.getElementById('tabDiff').innerHTML='<strong>'+fmt(o.risparmio)+'</strong>';
+    var acc=o.acconto, novTxt, novDet;
+    if(!acc.dovuto){novTxt='0€';novDet='— nessun acconto (imposta sotto 51,65€)';}
+    else if(acc.rate.length===2){var r2=acc.rate[1];novTxt=fmt(r2.importo);novDet='— 2ª rata acconto (60%), cod. F24 '+r2.codice;}
+    else{var r1=acc.rate[0];novTxt=fmt(r1.importo);novDet='— unica soluzione, cod. F24 '+r1.codice;}
+    document.getElementById('outNov').textContent=novTxt;
+    document.getElementById('outNovDet').textContent=novDet;
+    if(acc.dovuto&&acc.rate.length===2){
+      document.getElementById('outAccDet').textContent='Acconto totale '+fmt(acc.totale)+' (100% imposta anno prec.): '+fmt(acc.rate[0].importo)+' cod. '+acc.rate[0].codice+' entro 30/06 + '+fmt(acc.rate[1].importo)+' cod. '+acc.rate[1].codice+' entro 30/11. Saldo cod. 1842 entro 30/06.';
+    }else if(acc.dovuto){
+      document.getElementById('outAccDet').textContent='Acconto totale '+fmt(acc.totale)+' in unica soluzione entro 30/11, cod. '+acc.rate[0].codice+'. Saldo cod. 1842 entro 30/06.';
+    }else{
+      document.getElementById('outAccDet').textContent='Nessun acconto dovuto (imposta ≤ 51,65€). Solo saldo cod. 1842 entro 30/06.';
+    }
+    var h='#L='+L+'&T='+T+'&R='+R+(T==='brevi'?'&N='+N:'');
+    document.getElementById('outHash').textContent=h;
+    try{history.replaceState(null,'',h+(location.search||''));}catch(e){}
+  }
+  function fromHash(){
+    try{
+      var h=(location.hash||'').replace(/^#/,''); if(!h) return;
+      var q=new URLSearchParams(h);
+      if(q.get('L'))document.getElementById('inL').value=q.get('L');
+      if(q.get('T')&&['libero','concordato','brevi'].indexOf(q.get('T'))>=0)document.getElementById('inT').value=q.get('T');
+      if(q.get('R'))document.getElementById('inR').value=q.get('R');
+      if(q.get('N'))document.getElementById('inN').value=q.get('N');
+    }catch(e){}
+  }
+  function tipoVis(){
+    var t=val('inT');document.getElementById('boxN').hidden=(t!=='brevi');
+  }
+  fetch('params-2026.json').then(function(r){return r.json();}).then(function(j){
+    P={cedolare:j.cedolare,irpef_2026:j.irpef_2026,acconto:j.acconto};
+    try{document.getElementById('taxmeta').textContent='v'+j.meta.version+' · dati verificati '+j.meta.verifica_fonti;
+    document.getElementById('taxmeta2').textContent=j.meta.version;}catch(e){}
+    fromHash();tipoVis();render();tally('usi');
+  }).catch(function(){
+    P={cedolare:{libero:.21,concordato:.10,brevi_primo:.21,brevi_secondo:.26},
+       irpef_2026:{scaglioni:[{fino_a:28000,aliquota:.23},{fino_a:50000,aliquota:.33},{fino_a:null,aliquota:.43}],abbattimento_locazioni_abitative:.05},
+       acconto:{misura:1,nessun_acconto_sotto:51.65,due_rate_sopra:257.52,rata1_quota:.4,rata2_quota:.6,codici_f24:{rata1_40:'1840',rata2_o_unica:'1841',saldo:'1842'}}};
+    fromHash();tipoVis();render();tally('usi');
+  });
+  ['inL','inT','inR','inN'].forEach(function(id){
+    document.getElementById(id).addEventListener('input',function(){tipoVis();render();});
+    document.getElementById(id).addEventListener('change',function(){tipoVis();render();});
+  });
+  document.getElementById('btnPdf').addEventListener('click',function(){
+    var c=tally('pdfclick');
+    document.getElementById('modUsi').textContent=String(read('usi'));
+    document.getElementById('modClick').textContent=String(c||read('pdfclick'));
+    document.getElementById('modale').classList.add('aperta');
+  });
+  document.getElementById('btnChiudi').addEventListener('click',function(){
+    document.getElementById('modale').classList.remove('aperta');
+  });
+  document.getElementById('modale').addEventListener('click',function(e){
+    if(e.target===this)this.classList.remove('aperta');
+  });
+})();
+</script>
+</body>
+</html>

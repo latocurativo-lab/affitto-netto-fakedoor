@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://latocurativo-lab.github.io/affitto-netto-fakedoor/sitemap.xml

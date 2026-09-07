@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "version": "2026.09.07-fakedoor-v1",
+    "verifica_fonti": "2026-09-07",
+    "nota": "STIMA a scopo informativo. Non consulenza fiscale. Fonti: AdE cedolare/IRPEF/F24."
+  },
+  "cedolare": {
+    "libero": 0.21,
+    "concordato": 0.10,
+    "brevi_primo": 0.21,
+    "brevi_secondo": 0.26,
+    "base_normativa": "D.Lgs. 23/2011 art.3; L. Bilancio 2024 n.213/2023; perimetro 2 appartamenti 2026"
+  },
+  "irpef_2026": {
+    "scaglioni": [
+      { "fino_a": 28000, "aliquota": 0.23 },
+      { "fino_a": 50000, "aliquota": 0.33 },
+      { "fino_a": null, "aliquota": 0.43 }
+    ],
+    "base_normativa": "L. Bilancio 2026 n.199/2025 (23/33/43)",
+    "abbattimento_locazioni_abitative": 0.05,
+    "base_abbattimento": "TUIR art.37 (da riverificare il giorno del build prodotto)"
+  },
+  "acconto": {
+    "misura": 1.0,
+    "nessun_acconto_sotto": 51.65,
+    "due_rate_sopra": 257.52,
+    "rata1_quota": 0.4,
+    "rata2_quota": 0.6,
+    "codici_f24": { "rata1_40": "1840", "rata2_o_unica": "1841", "saldo": "1842" },
+    "scadenze": ["30/06 (saldo anno prec. + 1a rata acconto)", "30/11 (2a rata o unica soluzione)"]
+  }
+}

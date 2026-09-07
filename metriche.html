@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metriche trasparenti — affitto-netto TEST</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--carta:#faf5ea;--riga:#1c1710;--timbro:#b3261e;--mono:ui-monospace,Menlo,Consolas,monospace;--serif:Didot,Georgia,serif;--sans:"Avenir Next","Segoe UI",Verdana,sans-serif}
+body{margin:0;background:var(--carta);color:var(--riga);font-family:var(--sans)}
+.wrap{max-width:640px;margin:0 auto;padding:24px 18px 64px}
+h1{font-family:var(--serif)}
+table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:.9rem}
+td,th{border:1px solid var(--riga);padding:8px;text-align:left}
+button{font-weight:700;padding:8px 14px;margin:4px 8px 4px 0;cursor:pointer}
+pre{background:#fffdf6;border:1px solid var(--riga);padding:12px;overflow:auto}
+</style>
+</head>
+<body><div class="wrap">
+<h1>Come misuriamo (senza trucco)</h1>
+<p>Pagina di <strong>TEST</strong>: nessun pagamento, nessun cookie di profilazione. Due contatori anonimi salvati <strong>solo nel tuo browser</strong> (localStorage): usi-calcolo e click sul pulsante PDF. La conversione = click / usi. Soglia GO: ≥1,5% su 500+ usi reali. Sintetici vietati.</p>
+<table><tr><th>Metrica</th><th>Valore (questo browser)</th></tr>
+<tr><td>Usi-calcolo</td><td id="mUsi">0</td></tr>
+<tr><td>Click PDF (TEST)</td><td id="mClick">0</td></tr>
+<tr><td>Conversione</td><td id="mConv">—</td></tr>
+<tr><td>Sorgente (UTM)</td><td id="mSrc">—</td></tr></table>
+<p><button id="bExp" type="button">Copia JSON</button><button id="bReset" type="button">Azzera (mio browser)</button> <a href="index.html">← torna al calcolatore</a></p>
+<pre id="mJson">{}</pre>
+<script>
+(function(){
+  function g(k){try{return localStorage.getItem('affitto_fakedoor_'+k)||'0';}catch(e){return '0';}}
+  var u=parseInt(g('usi'),10)||0, c=parseInt(g('pdfclick'),10)||0;
+  var src='—'; try{src=localStorage.getItem('affitto_fakedoor_src')||'—';}catch(e){}
+  document.getElementById('mUsi').textContent=u;
+  document.getElementById('mClick').textContent=c;
+  document.getElementById('mConv').textContent=u>0?((100*c/u).toFixed(2)+'%'):'—';
+  document.getElementById('mSrc').textContent=src;
+  var j={usi:u,pdf_click:c,conv:u>0?+(c/u).toFixed(4):null,sorgente:src,nota:'TEST, conteggi locali, sintetici vietati'};
+  document.getElementById('mJson').textContent=JSON.stringify(j,null,2);
+  document.getElementById('bExp').onclick=function(){try{navigator.clipboard.writeText(JSON.stringify(j));this.textContent='Copiato!';}catch(e){this.textContent='Seleziona dal riquadro';}};
+  document.getElementById('bReset').onclick=function(){try{localStorage.removeItem('affitto_fakedoor_usi');localStorage.removeItem('affitto_fakedoor_pdfclick');location.reload();}catch(e){}};
+})();
+</script>
+</div></body>
+</html>
